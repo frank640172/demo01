@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--
+         内部JS 通过<script>，标签内容
+         外部JS 定义<script> 通过src属性引入
+
+    -->
+<!--    <script>-->
+<!--      var b = -"123";-->
+<!--      document.write(typeof(b));-->
+<!--    </script>-->
+
+<!--    <script>-->
+<!--       var img = document.getElementById("off");-->
+<!--       alert(id);-->
+<!--    </script>-->
+
+
+
+</head>
+<!--<script src="../js/a.js"></script>-->
+
+<body>
+<img src="../img/off.jpg" id="off">
+<h1 id = "title"> 马云 </h1>
+
+
+<script>
+    alert("我要换内容了 ");
+    var word1 = document.getElementById("title");
+    word1.innerHTML = "刘强东";
+</script>
+</body>
+
+</html>

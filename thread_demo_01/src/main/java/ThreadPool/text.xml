@@ -1,0 +1,17 @@
+<?xml  version='1.0' ?>       
+<!--版本声明,必须顶行写 以xml结尾，必须有且仅有一个根标签，属性必须用引号印起来，标签必须关闭，区分大小写
+-->
+<users  id='2'>
+	<user>
+		<name>lisi</name>
+		<age>18</age>
+		<gender>male</gender>
+		<code>
+			<![CDATA[
+			   if(a > b && b < c){
+
+			   }
+			]]>
+		</code>
+	</user>
+</users>

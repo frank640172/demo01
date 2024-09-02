@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    table{
+        border: 1px solid;
+        margin: auto;
+        width: 500px;
+    }
+
+    td,th{
+        text-align: center;
+        border: 1px solid;
+    }
+
+    div{
+        text-align: center;
+        margin: 50px;
+    }
+</style>
+<body>
+<div>
+    <input type="text" id = "id" placeholder="请输入编号">
+    <input type="text" id = name placeholder="请输入姓名">
+    <input type="text" id = "gender" placeholder="请输入性别">
+    <input type="button" value="添加" id="btn_add">
+
+</div>
+
+<table>
+    <caption>学生信息表</caption>
+    <tr>
+        <th>编号</th>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>操作</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>令狐冲</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="delTr(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td>2</td>
+        <td>任我行</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="delTr(this)">删除</a></td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>向问天</td>
+        <td>男</td>
+        <td><a href="javascript:void(0)" onclick="delTr(this)">删除</a></td>
+    </tr>
+</table>
+
+<script>
+
+    document.getElementById("btn_add").onclick = function () {
+        //去得到数据并创立对象
+        var t_id = document.getElementById("id").value;
+        var t_name = document.getElementById("name").value;
+        var t_gender = document.getElementById("gender").value;
+        var t_table = document.getElementsByTagName("table");
+
+        //创建td
+        var  td_id = document.createElement("td");
+        td_id.append(t_id);
+        var  td_name = document.createElement("td");
+        td_name.append(t_name);
+        var  td_gender = document.createElement("td");
+        td_gender.append(t_gender);
+        // var td_
+
+        var td_a= document.createElement("td");
+        var element_a = document.createElement("a");
+        //element_a.setAttribute("href","javascript:void(0)");
+        element_a.href="javascript:void(0)";
+        element_a.text="删除";
+        // element_a.setAttribute("onclick","delTr(this);")
+        element_a.onclick=delTr(this);
+        td_a.appendChild(element_a);
+
+        var tr =  document.createElement("tr");
+        tr.appendChild(td_id);
+        tr.appendChild(td_name);
+        tr.appendChild(td_gender);
+        tr.appendChild(td_a);
+
+        t_table[0].append(tr);
+    }
+
+
+    delTr = function (obj){
+       var td = obj.parentNode;
+       var tr = td.parentNode;
+       var table = tr.parentNode;
+       // var t_table = document.getElementsByTagName("table");
+       // t_table[0].removeChild(tr);
+        table.removeChild(tr);
+    }
+
+</script>
+</body>
+</html>

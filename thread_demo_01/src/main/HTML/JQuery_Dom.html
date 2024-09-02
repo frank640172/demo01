@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1-min.js"></script>
+</head>
+<body>
+<a href=""><font>小胖子</font></a>
+
+<script>
+    $(function (){
+        //html 获取/设置元素的标签体内容  得到的是<font>小胖子</font>
+        window.alert($("a").html());
+        //text 获取/设置元素的标签体纯文本 得到的是小胖子，
+        window.alert($("a").text());
+        //val  获取/设置元素的value属性值
+    });
+
+    //获取属性操作全部用prop即可，都能得到
+    /*
+    $("#id").prop();设置属性，删除用removeProp
+     */
+
+</script>
+</body>
+</html>

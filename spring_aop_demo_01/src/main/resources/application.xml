@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="myAdvice"  class="com.itheima.service.advice.MyAdvice"></bean>
+    <bean id="userService" class="com.itheima.service.impl.UserServiceImpl"></bean>
+<!--    <bean id="mockAopBeanPostProcessor" class="com.itheima.service.beanPostProcessor.MockAopBeanPostProcessor"></bean>-->
+    <aop:config>
+        <aop:pointcut id="myPointCut" expression="execution(void com.itheima.service.UserService.show1())"/>
+        <aop:aspect ref="myAdvice">
+            <aop:before method="beforeAdvice" pointcut-ref="myPointCut"></aop:before>
+            <aop:after-returning method="afterReturningAdvice" pointcut-ref="myPointCut"></aop:after-returning>
+        </aop:aspect>
+    </aop:config>
+</beans>
