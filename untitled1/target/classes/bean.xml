@@ -4,9 +4,9 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
 		https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="hello" class="com.acwing.pojo.Hello">
-        <property name="name" value="xnn">
 
-        </property>
-    </bean>
+     <bean id="hello" class="com.acwinig.pojo.User">
+        <property name="name" ref="xnn"></property>
+     </bean>
+
 </beans>
