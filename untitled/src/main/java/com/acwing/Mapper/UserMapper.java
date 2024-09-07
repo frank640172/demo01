@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 @Mapper
 @Service
-public interface UserMapper extends BaseMapper<User> {
+public interface UserMapper {
 
-//    List<User> selectAll();
+    List<User> selectAll();
 }

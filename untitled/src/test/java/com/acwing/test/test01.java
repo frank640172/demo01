@@ -10,8 +10,11 @@ import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+
 
 
 import java.io.IOException;
@@ -22,7 +25,7 @@ import java.util.Map;
 
 
 public class test01 {
-    @Autowired
+   @Autowired
     private UserMapper userMapper;
 
     @Test
@@ -100,6 +103,7 @@ public class test01 {
 
     }
 
+
     @Test
     void test_update() throws IOException {
         String resource = "mybatis-config.xml";
@@ -125,10 +129,5 @@ public class test01 {
 
 
 
-    @Test
-    void test_mybatis_plus_select_all(){
-        User user = userMapper.selectById(1);
-        System.out.println(user);
-    }
 
 }

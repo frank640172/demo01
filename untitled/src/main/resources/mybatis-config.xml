@@ -18,7 +18,7 @@
 <!--        指定sql映射文件的路径-->
         <mapper resource="com/acwing/Mapper/UserMapper.xml"/>
         <mapper resource="com/acwing/Mapper/BrandMapper.xml"/>
-        <package name="com.acwing.Mapper"/>
+    <package name="com.acwing.Mapper"/>
     </mappers>
    
 </configuration>
