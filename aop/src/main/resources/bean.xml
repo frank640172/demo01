@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean name="user" class="com.acwing.Demo.User">
+<!--    依赖：bean对象的创建依赖于容器，bean对象的所有属性由容器注入-->
+    <property name="id" value="3"></property>
+    <property name="gender" value="women"></property>
+    <property name="addr" value="新疆"></property>
+    <property name="password" value="195956"></property>
+    <property name="username" value="zhanghang"></property>
+</bean>
+
+    <bean id="student" class="com.acwing.Demo.Student">
+        <property name="name" value="xnn"></property>
+        <property name="address" ref="addr"></property>
+<!--        数组赋值-->
+        <property name="books" >
+            <array>
+                <value>火影</value>
+                <value>h海贼王</value>
+            </array>
+        </property>
+
+        <property name="scores">
+            <map>
+                <entry key="数学" value="78"></entry>
+                <entry key="语文" value="118"></entry>
+                <entry key="英语" value="139"></entry>
+            </map>
+        </property>
+
+<!--        设置控制-->
+        <property name="wife" value=""></property>
+    </bean>
+
+    <bean id="addr" class="com.acwing.Demo.Address">
+        <property name="address" value="xinjiang"></property>
+    </bean>
+
+
+
+</beans>

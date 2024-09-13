@@ -1,7 +1,7 @@
-<!--<?xml version="1.0" encoding="UTF-8" ?>-->
-<!--&lt;!&ndash;<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<mapper namespace="mapper.UserMapper">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;    <select id="getAllUsers" resultType="pojo.User">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;        select * from tb_user;&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;    </select>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</mapper>&ndash;&gt;&ndash;&gt;-->
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="mapper.UserMapper">
+    <select id="getAllUsers" resultType="pojo.User">
+        select * from tb_user;
+    </select>
+</mapper>

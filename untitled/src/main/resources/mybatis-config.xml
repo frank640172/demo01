@@ -7,18 +7,16 @@
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
-                <property name="driver" value="com.mysql.jdbc.Driver"/>
-                <property name="url" value="jdbc:mysql://localhost:3306/mybatis?useSSL=false"/>
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://localhost:3306/mybatis"/>
                 <property name="username" value="root"/>
                 <property name="password" value="2656175yanbo"/>
             </dataSource>
         </environment>
     </environments>
+
     <mappers>
-<!--        指定sql映射文件的路径-->
         <mapper resource="com/acwing/Mapper/UserMapper.xml"/>
         <mapper resource="com/acwing/Mapper/BrandMapper.xml"/>
-    <package name="com.acwing.Mapper"/>
     </mappers>
-   
 </configuration>
